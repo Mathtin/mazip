@@ -1,0 +1,1 @@
+make.exe mazip.exe

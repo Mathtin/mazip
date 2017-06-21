@@ -1,0 +1,9 @@
+.vscode
+old
+testdir
+src/*.o
+src/*.obj
+mazip
+mazip.exe
+src/mazip
+src/mazip.exe
