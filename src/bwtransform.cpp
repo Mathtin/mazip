@@ -35,6 +35,9 @@ static void buildSA(byte * s, int n) {
 }
 
 static uint16_t BWTBuffer(byte * input, byte * output, size_t sz) {
+    if (sz == 0) {
+        return 0;
+    }
     uint16_t opos = 0;
     memcpy(output, input, sz);
     memcpy(output + sz, input, sz);
@@ -123,7 +126,7 @@ void BWTransform::LoadPage(size_t p) {
 }
 
 void BWTransform::SwapOff() {
-    if (grow - 2 > 0) {
+    if (grow > 2) {
         resize(bwtsize + grow);
         grow = 0;
     }
