@@ -14,6 +14,7 @@ Check() {
 
 rm -rf src.tar*
 echo -n 'Cleaning up...                                         ' ; $TIMER make clean > /dev/null
+test $# -gt 0 && test $1 = "clean" && exit
 echo -n 'Building MaZIP (UNIX)...                               ' ; $TIMER make mazip > /dev/null
 echo -n 'Building MaZIP (WINDOWS)...                            ' ; $TIMER make mazip.exe > /dev/null
 echo -n 'Creating src.tar...                                    ' ; $TIMER tar -cf src.tar src

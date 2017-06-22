@@ -85,7 +85,7 @@ class BWTransform : public IBuffer {
 
   protected:
     size_t bwtpage;
-    byte buff[L_PAGE * 2 + 3];
+    byte buff[L_PAGE + 3];
     TMaFile & file;
     size_t offsetPages;
     size_t bwtsize;

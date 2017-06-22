@@ -26,8 +26,8 @@ LIBS     =
 INCS     = 
 CXXINCS  = 
 BIN      = mazip
-CXXFLAGS = $(CXXINCS) -std=c++17 -Wall -pedantic -O3
-CFLAGS   = $(INCS)    -std=c11   -Wall -pedantic -O3
+CXXFLAGS = $(CXXINCS) -std=c++17 -Wall -pedantic -Ofast
+CFLAGS   = $(INCS)    -std=c11   -Wall -pedantic -Ofast
 RM       = rm -f
 
 .PHONY: all all-before all-after clean clean-custom
